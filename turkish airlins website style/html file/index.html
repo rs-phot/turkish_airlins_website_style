@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turkish Airlines — Widen Your World</title>
+  <link rel="stylesheet" href="../css file/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="home.html" class="nav-logo">
+        <div class="logo-mark">TK</div>
+        <div class="logo-text">
+          Turkish Airlines
+          <span>Widen Your World</span>
+        </div>
+      </a>
+
+      <!-- Primary Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#booking" class="nav-link active">Book</a></li>
+        <li class="has-dropdown">
+          <a href="#" class="nav-link">Destinations <span class="caret">▾</span></a>
+          <div class="dropdown">
+            <a href="#">Europe</a>
+            <a href="#">Asia</a>
+            <a href="#">Americas</a>
+            <a href="#">Africa</a>
+            <a href="#">Middle East</a>
+          </div>
+        </li>
+        <li><a href="#offers" class="nav-link">Offers</a></li>
+        <li><a href="#" class="nav-link">Miles &amp; Smiles</a></li>
+        <li><a href="#" class="nav-link">Check-In</a></li>
+        <li><a href="#" class="nav-link">My Trips</a></li>
+      </ul>
+
+      <!-- Right Actions -->
+      <div class="nav-actions">
+        <button class="nav-lang">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          EN
+        </button>
+        <a href="login.html" class="btn-nav-login">Sign In</a>
+        <a href="signup.html" class="btn-nav-signup">Sign Up</a>
+        <button class="nav-burger" id="navBurger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+      <!-- Animated plane path SVG -->
+      <svg class="hero-plane-path" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path class="flight-trail" d="M-100,500 Q200,400 400,300 Q700,150 900,200 Q1100,250 1200,180 Q1350,100 1540,50" stroke="rgba(227,24,55,0.15)" stroke-width="2" fill="none" stroke-dasharray="8 6"/>
+      </svg>
+      <!-- Plane icon -->
+      <div class="hero-plane" id="heroPlane">✈</div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-line"></span>
+          Discover the World
+        </div>
+        <h1 class="hero-title">
+          Fly to <span class="title-highlight">130+</span><br />
+          Countries,<br />
+          <em>One Airline.</em>
+        </h1>
+        <p class="hero-subtitle">
+          From Istanbul to every corner of the globe — experience award-winning service, world-class cuisine, and seamless journeys with Turkey's flag carrier.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <strong>340+</strong>
+            <span>Destinations</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <strong>130+</strong>
+            <span>Countries</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <strong>5★</strong>
+            <span>Skytrax Rating</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       BOOKING WIDGET
+  ══════════════════════════════════════ -->
+  <section class="booking-section" id="booking">
+    <div class="booking-card">
+
+      <!-- Trip Type Tabs -->
+      <div class="trip-tabs">
+        <button class="trip-tab active" data-type="roundtrip">⇄ Round Trip</button>
+        <button class="trip-tab" data-type="oneway">→ One Way</button>
+        <button class="trip-tab" data-type="multicity">⊞ Multi-City</button>
+      </div>
+
+      <!-- Booking Form -->
+      <form class="booking-form" id="bookingForm">
+
+        <!-- Route Row -->
+        <div class="booking-row route-row">
+          <div class="booking-field">
+            <label class="booking-label">From</label>
+            <div class="booking-input-wrap">
+              <svg class="booking-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <input type="text" class="booking-input" placeholder="City or airport" value="Istanbul (IST)" id="fromCity" />
+            </div>
+          </div>
+
+          <button type="button" class="swap-btn" id="swapBtn" title="Swap airports">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+              <polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+            </svg>
+          </button>
+
+          <div class="booking-field">
+            <label class="booking-label">To</label>
+            <div class="booking-input-wrap">
+              <svg class="booking-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+              <input type="text" class="booking-input" placeholder="City or airport" id="toCity" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Date & Passenger Row -->
+        <div class="booking-row">
+          <div class="booking-field">
+            <label class="booking-label">Departure</label>
+            <div class="booking-input-wrap">
+              <svg class="booking-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <input type="date" class="booking-input" id="depDate" />
+            </div>
+          </div>
+
+          <div class="booking-field" id="returnField">
+            <label class="booking-label">Return</label>
+            <div class="booking-input-wrap">
+              <svg class="booking-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <input type="date" class="booking-input" id="retDate" />
+            </div>
+          </div>
+
+          <div class="booking-field">
+            <label class="booking-label">Passengers</label>
+            <div class="booking-input-wrap">
+              <svg class="booking-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              <input type="number" class="booking-input" value="1" min="1" max="9" id="passengers" />
+            </div>
+          </div>
+
+          <div class="booking-field">
+            <label class="booking-label">Cabin Class</label>
+            <div class="booking-input-wrap select-wrap">
+              <svg class="booking-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
+              </svg>
+              <select class="booking-input booking-select" id="cabinClass">
+                <option value="economy">Economy</option>
+                <option value="comfort">Comfort</option>
+                <option value="business">Business</option>
+              </select>
+              <span class="select-caret">▾</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="booking-submit-row">
+          <button type="submit" class="btn-search-flights">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            Search Flights
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       POPULAR DESTINATIONS
+  ══════════════════════════════════════ -->
+  <section class="section destinations-section" id="destinations">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Fly Anywhere</div>
+        <h2 class="section-title">Popular Destinations</h2>
+        <p class="section-sub">Hand-picked routes with the best fares this season</p>
+      </div>
+
+      <div class="destinations-grid">
+
+        <div class="dest-card dest-card--large" data-reveal>
+          <div class="dest-img" style="background: linear-gradient(135deg,#1a0a0a 0%,#3d1515 50%,#1a0a14 100%);">
+            <div class="dest-city-art">🗼</div>
+          </div>
+          <div class="dest-info">
+            <div class="dest-badge">Most Popular</div>
+            <h3 class="dest-name">Paris</h3>
+            <p class="dest-country">France · CDG</p>
+            <div class="dest-price">From <strong>€ 289</strong></div>
+          </div>
+        </div>
+
+        <div class="dest-card" data-reveal>
+          <div class="dest-img" style="background: linear-gradient(135deg,#0a1a14 0%,#0d3320 100%);">
+            <div class="dest-city-art">🗽</div>
+          </div>
+          <div class="dest-info">
+            <h3 class="dest-name">New York</h3>
+            <p class="dest-country">USA · JFK</p>
+            <div class="dest-price">From <strong>$ 549</strong></div>
+          </div>
+        </div>
+
+        <div class="dest-card" data-reveal>
+          <div class="dest-img" style="background: linear-gradient(135deg,#0a0a1a 0%,#151535 100%);">
+            <div class="dest-city-art">🗾</div>
+          </div>
+          <div class="dest-info">
+            <h3 class="dest-name">Tokyo</h3>
+            <p class="dest-country">Japan · NRT</p>
+            <div class="dest-price">From <strong>$ 699</strong></div>
+          </div>
+        </div>
+
+        <div class="dest-card" data-reveal>
+          <div class="dest-img" style="background: linear-gradient(135deg,#1a1400 0%,#3d3000 100%);">
+            <div class="dest-city-art">🌆</div>
+          </div>
+          <div class="dest-info">
+            <h3 class="dest-name">Dubai</h3>
+            <p class="dest-country">UAE · DXB</p>
+            <div class="dest-price">From <strong>$ 199</strong></div>
+          </div>
+        </div>
+
+        <div class="dest-card" data-reveal>
+          <div class="dest-img" style="background: linear-gradient(135deg,#001a1a 0%,#003333 100%);">
+            <div class="dest-city-art">🦁</div>
+          </div>
+          <div class="dest-info">
+            <h3 class="dest-name">Nairobi</h3>
+            <p class="dest-country">Kenya · NBO</p>
+            <div class="dest-price">From <strong>$ 420</strong></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-cta">
+        <a href="#" class="btn-outline">View All Destinations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       OFFERS STRIP
+  ══════════════════════════════════════ -->
+  <section class="offers-section" id="offers">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Limited Time</div>
+        <h2 class="section-title">Exclusive Offers</h2>
+      </div>
+
+      <div class="offers-grid">
+
+        <div class="offer-card" data-reveal>
+          <div class="offer-badge">-30%</div>
+          <div class="offer-icon">🌍</div>
+          <h3 class="offer-title">Europe Sale</h3>
+          <p class="offer-desc">Business class fares to 40+ European cities — limited seats available.</p>
+          <div class="offer-meta">
+            <span class="offer-expires">Ends Apr 30</span>
+            <a href="#" class="offer-link">Book Now →</a>
+          </div>
+        </div>
+
+        <div class="offer-card offer-card--gold" data-reveal>
+          <div class="offer-badge offer-badge--gold">Miles 2×</div>
+          <div class="offer-icon">✨</div>
+          <h3 class="offer-title">Double Miles</h3>
+          <p class="offer-desc">Earn double Miles &amp; Smiles points on all intercontinental flights this month.</p>
+          <div class="offer-meta">
+            <span class="offer-expires">Ends May 15</span>
+            <a href="#" class="offer-link">Learn More →</a>
+          </div>
+        </div>
+
+        <div class="offer-card" data-reveal>
+          <div class="offer-badge">New</div>
+          <div class="offer-icon">🏖️</div>
+          <h3 class="offer-title">Summer Packages</h3>
+          <p class="offer-desc">Flight + hotel bundles to Antalya, Bodrum, Maldives and more.</p>
+          <div class="offer-meta">
+            <span class="offer-expires">Summer 2026</span>
+            <a href="#" class="offer-link">Explore →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       WHY TURKISH AIRLINES
+  ══════════════════════════════════════ -->
+  <section class="section why-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Why Choose Us</div>
+        <h2 class="section-title">The Turkish Airlines Difference</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card" data-reveal>
+          <div class="why-icon">🍽️</div>
+          <h3>Award-Winning Cuisine</h3>
+          <p>Voted Best Airline Food in the world for 12 consecutive years by Skytrax passengers.</p>
+        </div>
+        <div class="why-card" data-reveal>
+          <div class="why-icon">🛋️</div>
+          <h3>Comfort at Every Class</h3>
+          <p>From spacious Economy seats to fully-flat Business Class beds with 18" screens.</p>
+        </div>
+        <div class="why-card" data-reveal>
+          <div class="why-icon">🌐</div>
+          <h3>Widest Global Network</h3>
+          <p>More countries served than any other airline — connecting 340+ destinations worldwide.</p>
+        </div>
+        <div class="why-card" data-reveal>
+          <div class="why-icon">🎖️</div>
+          <h3>Miles &amp; Smiles</h3>
+          <p>Earn miles on every flight, hotel stay, and car rental. Redeem for upgrades and free flights.</p>
+        </div>
+        <div class="why-card" data-reveal>
+          <div class="why-icon">🔒</div>
+          <h3>Safe &amp; Reliable</h3>
+          <p>IATA IOSA certified with an industry-leading on-time performance record.</p>
+        </div>
+        <div class="why-card" data-reveal>
+          <div class="why-icon">📱</div>
+          <h3>Digital First</h3>
+          <p>Seamless app check-in, real-time flight tracking, and instant boarding passes on your phone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       MILES & SMILES CTA BANNER
+  ══════════════════════════════════════ -->
+  <section class="miles-cta">
+    <div class="miles-cta-inner">
+      <div class="miles-cta-text">
+        <div class="section-eyebrow" style="color:var(--gold-light);">Miles &amp; Smiles</div>
+        <h2>Earn Miles on Every Journey</h2>
+        <p>Join over 17 million members and start turning flights into rewards. Your next trip could be free.</p>
+      </div>
+      <div class="miles-cta-actions">
+        <a href="signup.html" class="btn-cta-primary">Join for Free</a>
+        <a href="#" class="btn-cta-ghost">Learn About Miles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-mark small">TK</div>
+            <div class="logo-text">
+              Turkish Airlines
+              <span>Widen Your World</span>
+            </div>
+          </div>
+          <p class="footer-tagline">Connecting the world through Istanbul — the heart of global aviation.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Book &amp; Travel</h4>
+          <ul>
+            <li><a href="#">Book a Flight</a></li>
+            <li><a href="#">Check-In Online</a></li>
+            <li><a href="#">Manage Booking</a></li>
+            <li><a href="#">Flight Status</a></li>
+            <li><a href="#">Timetables</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Miles &amp; Smiles</h4>
+          <ul>
+            <li><a href="#">Earn Miles</a></li>
+            <li><a href="#">Redeem Miles</a></li>
+            <li><a href="#">Elite Membership</a></li>
+            <li><a href="#">Partner Airlines</a></li>
+            <li><a href="#">Miles Calculator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#">Baggage Rules</a></li>
+            <li><a href="#">Travel Insurance</a></li>
+            <li><a href="#">Visa Requirements</a></li>
+            <li><a href="#">Special Assistance</a></li>
+            <li><a href="#">Corporate Travel</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Turkish Airlines Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Settings</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="home.js"></script>
+</body>
+</html>
